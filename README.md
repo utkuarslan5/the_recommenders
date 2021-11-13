@@ -1,2 +1,2 @@
 # the_recommenders
-recommendation system for MillionSongDataset
+recommendation system for MillionPlaylistDataset
