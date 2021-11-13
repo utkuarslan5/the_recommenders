@@ -4,7 +4,7 @@ import pandas as pd
 from Tools.scripts.dutree import display
 from pandas import json_normalize
 
-path = 'D:/assets/datasets/RecSys/spotify_million_playlist_dataset_challenge'
+path = 'dataset/'
 
 with open(path + "/" + 'challenge_set.json', "r") as f:
     data = json.load(f)
