@@ -1,129 +1,1074 @@
 user,artist_name,rating
-1,The Black Eyed Peas,6
-1,Rascal Flatts,6
-1,Flo Rida,5
-1,Chris Brown,4
-1,Usher,3
-1,Trey Songz,3
-1,Rihanna,3
-1,Michael Jackson,3
-1,Jason Derulo,3
-1,Bruno Mars,3
-1,Beyoncé,3
-1,Tiësto,2
-1,Pitbull,2
-1,Nicki Minaj,2
-1,Miley Cyrus,2
-1,Miguel,2
+10,Wiz Khalifa,22
+10,Elvis Crespo,8
+10,Nicki Minaj,7
+10,Limi-T 21,7
+10,Drake,6
+10,Studio Musicians,5
+10,Plenealo,5
+10,Tyga,4
+10,Olga Tanon,4
+10,Kid Ink,4
+10,Grupo Mania,4
+10,El Gran Combo De Puerto Rico,4
+10,Chino & Nacho,4
+10,Sage The Gemini,3
+10,Rae Sremmurd,3
+10,Migos,3
+10,DJ Khaled,3
+10,Chris Brown,3
+10,Calvin Harris,3
+10,Waka Flocka Flame,2
+10,Tuxedo,2
+10,T.I.,2
+10,Sergio George's Salsa Giants,2
+10,Rick Ross,2
+10,Plies,2
+10,Pitbull,2
+10,Pirulo y la Tribu,2
+10,Niykee Heaton,2
+10,Ne-Yo,2
+10,Monchy & Alexandra,2
+10,Mally Mall,2
+10,Gary Nuñez,2
+10,Future,2
+10,Fifth Harmony,2
+10,Fergie,2
+10,Big Sean,2
+10,B.o.B,2
+10,will.i.am,1
+10,Young Money,1
+10,Usher,1
+10,Ty Dolla $ign,1
+10,Trevor Jackson,1
+10,Tove Lo,1
+10,Tom Petty and the Heartbreakers,1
+10,Tito Nieves,1
+10,The xx,1
+10,The Red Jumpsuit Apparatus,1
+10,The Real Tune,1
+10,The Orwells,1
+10,The Chainsmokers,1
+10,The Beach Boys,1
+10,The 1975,1
+10,Tha Joker,1
+10,Tech N9ne,1
+10,T-Pain,1
+10,Sugar Ray,1
+10,Steel Train,1
+10,Sonora Carruseles,1
+10,Snoop Dogg,1
+10,Sky Ferreira,1
+10,Shifty,1
+10,Seven Lions,1
+10,Sean Kingston,1
+10,Salva,1
+10,Rubén Blades,1
+10,Round2Crew,1
+10,Romeo Santos,1
+10,Rihanna,1
+10,Ricky Martin,1
+10,Rich Gang,1
+10,Rayven Justice,1
+10,R3HAB,1
+10,QUE.,1
+10,Project Pat,1
+10,Prince Royce,1
+10,Plena Libre,1
+10,P-Lo,1
+10,OutKast,1
+10,One Direction,1
+10,Omarion,1
+10,Oliver Heldens,1
+10,OYLS,1
+10,OG Maco,1
+10,Norah Jones,1
+10,New Boyz,1
+10,Natalie La Rose,1
+10,Mr. Probz,1
+10,MisterWives,1
+10,Milly Quezada,1
+10,Mike Jones,1
+10,Melina Leon,1
+10,Mazz,1
+10,Matoma,1
+10,Mase,1
+10,Maroon 5,1
+10,Mark Ronson,1
+10,Marian Hill,1
+10,Marc Anthony,1
+10,M83,1
+10,Luke Bryan,1
+10,Luis Enrique,1
+10,Los Hermanos Rosario,1
+10,Lil Jon & The East Side Boyz,1
+10,Lady Antebellum,1
+10,Kristin Kontrol,1
+10,Kirko Bangz,1
+10,Kevin Gates,1
+10,Kendrick Lamar,1
+10,Katy Perry,1
+10,Kaleb Mitchell,1
+10,KAYTRANADA,1
+10,K CAMP,1
+10,Juan Magán,1
+10,Juan Luis Guerra 4.40,1
+10,Joseph Fonseca,1
+10,Jeremih,1
+10,Jencarlos,1
+10,Jeezy,1
+10,Jason Derulo,1
+10,Jamie Foxx,1
+10,Ja Rule,1
+10,JP Cooper,1
+10,JAY Z,1
+10,J. Cole,1
+10,Ice Cube,1
+10,Gramps Morgan,1
+10,Gold Panda,1
+10,Gilberto Santa Rosa,1
+10,Gary Nuñez & Plena Libre,1
+10,Fetty Wap,1
+10,Farruko,1
+10,Fall Out Boy,1
+10,El Canario,1
+10,Echosmith,1
+10,Dorrough Music,1
+10,Don Omar,1
+10,Dom Kennedy,1
+10,Doe B,1
+10,Disclosure,1
+10,Diggy,1
+10,David Guetta,1
+10,DJ Snake,1
+10,Coldplay,1
+10,Clean Bandit,1
+10,Cherub,1
+10,Cheo Feliciano,1
+10,Charli XCX,1
+10,Busta Rhymes,1
+10,Bruno Mars,1
+10,Boosie Badazz,1
+10,Bobby Shmurda,1
+10,Betty Chung,1
+10,Becky G,1
+10,Bassnectar,1
+10,BOY,1
+10,Avicii,1
+10,Audio Push,1
+10,Ariana Grande,1
+10,Akon,1
+10,Adrian Marcel,1
+10,A-Trak,1
+10,A Boogie Wit da Hoodie,1
+9,Mumford & Sons,10
+9,The Lumineers,6
+9,The Black Keys,6
+9,Ed Sheeran,6
+9,Arctic Monkeys,4
+9,The Killers,3
+9,Two Door Cinema Club,2
+9,The Temper Trap,2
+9,The Avett Brothers,2
+9,Of Monsters and Men,2
+9,Kings of Leon,2
+9,Hozier,2
+9,Foster The People,2
+9,Fall Out Boy,2
+9,Dierks Bentley,2
+9,gnash,1
+9,X Ambassadors,1
+9,Vampire Weekend,1
+9,Trevor Jones,1
+9,The Wombats,1
+9,The Oh Hellos,1
+9,The Neighbourhood,1
+9,The Naked And Famous,1
+9,The Kills,1
+9,The Goo Goo Dolls,1
+9,The Go! Team,1
+9,The Darkness,1
+9,The Cinematic Orchestra,1
+9,Teddy Geiger,1
+9,Taylor Swift,1
+9,Susie Suh,1
+9,Stanaj,1
+9,Shawn Mendes,1
+9,Scarface,1
+9,Santana,1
+9,San Holo,1
+9,Rooney,1
+9,Rebelution,1
+9,Plain White T's,1
+9,Phoenix,1
+9,Peter Bradley Adams,1
+9,Peter Bjorn and John,1
+9,Paul Otten,1
+9,Passion Pit,1
+9,Noah Kahan,1
+9,Nate Ruess,1
+9,Modest Mouse,1
+9,MisterWives,1
+9,Maldita Vecindad Y Los Hijos Del 5to. Patio,1
+9,Maggie Rogers,1
+9,MGMT,1
+9,Lost Under Heaven,1
+9,Lord Huron,1
+9,London Music Works,1
+9,Logic,1
+9,Lady Of The Sunshine,1
+9,Kaskade,1
+9,Kaleo,1
+9,Julia Sheer,1
+9,Johnnyswim,1
+9,John Newman,1
+9,John Murphy,1
+9,Jimmy Needham,1
+9,Jasmine Thompson,1
+9,James Arthur,1
+9,JAY Z,1
+9,Iron & Wine,1
+9,Hans Zimmer,1
+9,Hamilton Leithauser + Rostam,1
+9,Gotye,1
+9,Gorillaz,1
+9,Good Charlotte,1
+9,Fitz and The Tantrums,1
+9,Fat Joe,1
+9,Empire of the Sun,1
+9,Dua Lipa,1
+9,Dougie MacLean,1
+9,Dead Man's Bones,1
+9,Crystal Fighters,1
+9,City and Colour,1
+9,Chris Stapleton,1
+9,Chicano Batman,1
+9,Caroline Glaser,1
+9,Cage The Elephant,1
+9,Bryson Tiller,1
+9,Bastille,1
+9,Band of Horses,1
+9,Angus & Julia Stone,1
+9,Aminé,1
+8,JAY Z,6
+8,DMX,6
+8,The Notorious B.I.G.,4
+8,J. Cole,4
+8,G-Eazy,4
+8,Drake,4
+8,2Pac,4
+8,Tee Grizzley,3
+8,Snoop Dogg,3
+8,Future,3
+8,Dr. Dre,3
+8,Zak Downtown,2
+8,Travis Scott,2
+8,The Game,2
+8,T-Wayne,2
+8,Packy,2
+8,Nas,2
+8,N.W.A.,2
+8,Migos,2
+8,Marty Grimes,2
+8,Mads Veslelia,2
+8,Logic,2
+8,Kevin Gates,2
+8,Kendrick Lamar,2
+8,Ice Cube,2
+8,Fetty Wap,2
+8,Eminem,2
+8,Eazy-E,2
+8,Darius Rucker,2
+8,Childish Gambino,2
+8,Big Sean,2
+8,50 Cent,2
+8,2 Chainz,2
+8,Young Thug,1
+8,Wu-Tang Clan,1
+8,Wiz Khalifa,1
+8,Wale,1
+8,Travis Mills,1
+8,The Wallflowers,1
+8,Shawn Mendes,1
+8,Salva,1
+8,Rudimental,1
+8,Rowlan,1
+8,Riff Raff,1
+8,Rich Chigga,1
+8,Rhye,1
+8,Public Enemy,1
+8,Pharoahe Monch,1
+8,OutKast,1
+8,Naughty By Nature,1
+8,Mike Stud,1
+8,Meek Mill,1
+8,Luniz,1
+8,London On Da Track,1
+8,Linkin Park,1
+8,Lil Uzi Vert,1
+8,Lecrae,1
+8,LL Cool J,1
+8,Kris Kross,1
+8,Keith Urban,1
+8,Kanye West,1
+8,KRS-One,1
+8,Jeremih,1
+8,Jay Jona,1
+8,J-Wright,1
+8,Incubus,1
+8,Geto Boys,1
+8,G-Unit,1
+8,Fat Joe,1
+8,Dylan Schneider,1
+8,Desiigner,1
+8,Derek Minor,1
+8,Cypress Hill,1
+8,Coolio,1
+8,Chance The Rapper,1
+8,Can't Stop Won't Stop,1
+8,C-Trox,1
+8,Busta Rhymes,1
+8,Boaz,1
+8,Big Pun,1
+8,Belly,1
+8,Ariana Grande,1
+8,A$AP Rocky,1
+8,A$AP Ferg,1
+8,A Boogie Wit da Hoodie,1
+8,21 Savage,1
+7,Drake,7
+7,Kendrick Lamar,5
+7,Chance The Rapper,5
+7,The Weeknd,4
+7,Grandtheft,4
+7,Calvin Harris,4
+7,Tyga,3
+7,The Chainsmokers,3
+7,Post Malone,3
+7,Major Lazer,3
+7,Kid Ink,3
+7,Future,3
+7,Flume,3
+7,Eminem,3
+7,Ty Dolla $ign,2
+7,The Notorious B.I.G.,2
+7,The Lion King Ensemble,2
+7,Sage The Gemini,2
+7,Migos,2
+7,Lil Uzi Vert,2
+7,Khalid,2
+7,Kanye West,2
+7,KYLE,2
+7,J. Cole,2
+7,Hermitude,2
+7,French Montana,2
+7,Fatman Scoop,2
+7,Ed Sheeran,2
+7,DJ Snake,2
+7,DJ Khaled,2
+7,Ciara,2
+7,Carnage,2
+7,Big Sean,2
+7,B.o.B,2
+7,50 Cent,2
+7,Zedd,1
+7,Zay Hilfigerrr,1
+7,Zara Larsson,1
+7,ZHU,1
+7,Young Thug,1
+7,YG,1
+7,Wiz Khalifa,1
+7,Waka Flocka Flame,1
+7,TroyBoi,1
+7,Travis Scott,1
+7,Tiga,1
+7,The Goo Goo Dolls,1
+7,T-Wayne,1
+7,Sublime,1
+7,Stephen Schwartz,1
+7,Spice 1,1
+7,Snoop Dogg,1
+7,Snakehips,1
+7,Skizzy Mars,1
+7,Sia,1
+7,Shoffy,1
+7,Shaggy,1
+7,Selena Gomez,1
+7,Salva,1
+7,SNBRN,1
+7,Russ,1
+7,Rudimental,1
+7,Rosie O'Donnell,1
+7,Roger Bart,1
+7,Robin Schulz,1
+7,Rihanna,1
+7,Rich Homie Quan,1
+7,Randy Newman,1
+7,Portugal. The Man,1
+7,Porter Robinson & Madeon,1
+7,Phil Collins,1
+7,Panama,1
+7,OneRepublic,1
+7,OMI,1
+7,Newsies Ensemble,1
+7,Nevada,1
+7,Nelly,1
+7,Ne-Yo,1
+7,NERO,1
+7,Mike Perry,1
+7,Martin Solveig,1
+7,Marshmello,1
+7,Maroon 5,1
+7,Mandy Moore,1
+7,M.I.A.,1
+7,Louis Prima,1
+7,Lil Wayne,1
+7,Lil Jon,1
+7,Liam Payne,1
+7,Kodak Black,1
+7,KingJet,1
+7,King Chip,1
+7,Kiiara,1
+7,Keys N Krates,1
+7,Kevin Gates,1
+7,Kesha,1
+7,Justin Timberlake,1
+7,Justin Bieber,1
+7,Juicy J,1
+7,Jodi Benson,1
+7,Jess Glynne,1
+7,Jason Raize,1
+7,Jackson Breit,1
+7,J-Kwon,1
+7,J Balvin,1
+7,Isaiah Rashad,1
+7,Hunter Foster,1
+7,Hundred Waters,1
+7,Hugh Jackman,1
+7,Gucci Mane,1
+7,Galantis,1
+7,Fifth Harmony,1
+7,Fetty Wap,1
+7,Fat Joe,1
+7,Disclosure,1
+7,Dick Van Dyke,1
+7,Desiigner,1
+7,Dante Klein,1
+7,DRAM,1
+7,DNCE,1
+7,DMX,1
+7,Company,1
+7,Chorus - Hercules,1
+7,Childish Gambino,1
+7,Cherub,1
+7,Catherine Zeta-Jones,1
+7,Cassie,1
+7,Bomba Estéreo,1
+7,Bloc Party,1
+7,Bebe Rexha,1
+7,Ariana Grande,1
+7,Anika Noni Rose,1
+7,Amy Adams,1
+7,Aminé,1
+7,AlunaGeorge,1
+7,Action Bronson,1
+7,A$AP Ferg,1
+7,22 Savage,1
+6,Bon Iver,19
+6,Ásgeir,9
+6,Sleeping At Last,7
+6,Novo Amor,6
+6,Vancouver Sleep Clinic,4
+6,SYML,3
+6,Hozier,3
+6,Flo Rida,2
+6,Bear's Den,2
+6,U137,1
+6,Two Door Cinema Club,1
+6,Twenty One Pilots,1
+6,Tryhardninja,1
+6,Tourist,1
+6,The Slow Show,1
+6,The Piano Guys,1
+6,Talos,1
+6,Sophia Black,1
+6,Siv Jakobsen,1
+6,Royal Tongues,1
+6,Pokémon,1
+6,Pinback,1
+6,Peter Wolf Crier,1
+6,Oh Wonder,1
+6,Midival Punditz,1
+6,Mark Ronson,1
+6,Major Lazer,1
+6,Lorde,1
+6,Logan Paul,1
+6,Little People,1
+6,Kyle Lionhart,1
+6,KYLE,1
+6,Justin Vernon,1
+6,Jay Hardway,1
+6,James Vincent McMorrow,1
+6,Jake Paul,1
+6,Imagine Dragons,1
+6,Hugo Cantarra,1
+6,Howard,1
+6,House Of Pain,1
+6,Gregory Alan Isakov,1
+6,Gary Numan,1
+6,Gallant,1
+6,Fitz and The Tantrums,1
+6,Fink,1
+6,Ed Tullett,1
+6,Ed Sheeran,1
+6,Desmeon,1
+6,Cyrus Reynolds,1
+6,Crossfade,1
+6,Childish Gambino,1
+6,Calvin Harris,1
+6,Bruno Mars,1
+6,Bob Marley & The Wailers,1
+6,Birdy,1
+6,Bastille,1
+6,Bananarama,1
+6,Axel Flovent,1
+6,Austin Mahone,1
+6,Alvaro,1
+5,The Piano Guys,54
+5,Ed Sheeran,8
+5,The Beatles,7
+5,One Direction,7
+5,Khalid,7
+5,Taylor Swift,6
+5,Lana Del Rey,6
+5,Harry Styles,6
+5,Little Mix,5
+5,The Hunna,4
+5,Shania Twain,4
+5,Paramore,4
+5,Nicki Minaj,4
+5,Maroon 5,4
+5,Jack & Jack,4
+5,Alan Jackson,4
+5,Adele,4
+5,Twenty One Pilots,3
+5,Tommy James & The Shondells,3
+5,The Zombies,3
+5,The Vamps,3
+5,Sam Smith,3
+5,Sam Hunt,3
+5,Niall Horan,3
+5,John Travolta,3
+5,Elvis Presley,3
+5,Ariana Grande,3
+5,Alanis Morissette,3
+5,Thomas Rhett,2
+5,Sia Furler,2
+5,Rosemary Clooney,2
+5,Rihanna,2
+5,No Doubt,2
+5,Luke Bryan,2
+5,Lesley Gore,2
+5,Lady Gaga,2
+5,Johnnyswim,2
+5,John Legend,2
+5,Eminem,2
+5,Childish Gambino,2
+5,Britney Spears,2
+5,Big Sean,2
+5,Beyoncé,2
+5,Avril Lavigne,2
+5,Alex Goot,2
+5,gnash,1
+5,blink-182,1
+5,ZHU,1
+5,X Ambassadors,1
+5,William Singe,1
+5,Travis Atreo,1
+5,Too Close To Touch,1
+5,Tommy James,1
+5,Timbaland,1
+5,The Neighbourhood,1
+5,The McCoys,1
+5,The Mamas & The Papas,1
+5,The Japanese House,1
+5,The Fray,1
+5,The Drifters,1
+5,The Civil Wars,1
+5,The Box Tops,1
+5,The Beach Boys,1
+5,Sugar Ray,1
+5,Spice Girls,1
+5,Soulja Boy,1
+5,Sixpence None The Richer,1
+5,Simon & Garfunkel,1
+5,Sheryl Crow,1
+5,Sergei Rachmaninoff,1
+5,Selena Gomez,1
+5,Seal,1
+5,Sara Bareilles,1
+5,Russell Dickerson,1
+5,Russ,1
+5,Robert DeLong,1
+5,Robby Benson,1
+5,Plain White T's,1
+5,Pink Floyd,1
+5,Paul Anka,1
+5,Passion Pit,1
+5,Omarion,1
+5,Olivia Newton-John,1
+5,Night Riots,1
+5,Nancy Sinatra,1
+5,Miranda Lambert,1
+5,Mel Carter,1
+5,Mandy Moore,1
+5,Makeout,1
+5,Lynyrd Skynyrd,1
+5,Loggins & Messina,1
+5,Lisa Loeb & Nine Stories,1
+5,Lil Yachty,1
+5,Lil Wayne,1
+5,Lil Uzi Vert,1
+5,Liam Payne,1
+5,Leslie Gore,1
+5,Lea Salonga,1
+5,Kid Rock,1
+5,Kelly Clarkson,1
+5,Keith Urban,1
+5,Katy Perry,1
+5,Karmin,1
+5,Kanye West,1
+5,KYLE,1
+5,Jon Schmidt,1
+5,Jewel,1
+5,Jason Aldean,1
+5,Jasmine Thompson,1
+5,James Bay,1
+5,Jake Owen,1
+5,J. Cole,1
+5,Interpol,1
+5,Herman's Hermits,1
+5,Grace,1
+5,Gotye,1
+5,Future,1
+5,Fergie,1
+5,Faith Hill,1
+5,Etta James,1
+5,Dusty Springfield,1
+5,Drake,1
+5,Dixie Chicks,1
+5,Destiny's Child,1
+5,Daniel Powter,1
+5,Coast Modern,1
+5,Christina Perri,1
+5,Chris Young,1
+5,Chris Stapleton,1
+5,Chorus - Beauty And the Beast,1
+5,Cardi B,1
+5,Bryson Tiller,1
+5,Bryan Adams,1
+5,Brett Young,1
+5,Brett Eldredge,1
+5,Blondie,1
+5,Billy Currington,1
+5,BTS,1
+5,Axel Hedfors,1
+5,Avery Wilson,1
+5,Arctic Monkeys,1
+5,Angela Lansbury,1
+5,Alex & Sierra,1
+5,A Boogie Wit da Hoodie,1
+5,2 Chainz,1
+4,Waylon Jennings,4
+4,Mark Chesnutt,4
+4,"Hank Williams, Jr.",4
+4,Johnny Paycheck,3
+4,David Allan Coe,3
+4,Conway Twitty,3
+4,Alabama,3
+4,Young Thug,2
+4,Tracy Lawrence,2
+4,Tracy Byrd,2
+4,The Charlie Daniels Band,2
+4,The Chainsmokers,2
+4,Shenandoah,2
+4,Sawyer Brown,2
+4,Merle Haggard,2
+4,Khalid,2
+4,John Anderson,2
+4,Imagine Dragons,2
+4,Gary Stewart,2
+4,Ed Sheeran,2
+4,Drake,2
+4,DJ Khaled,2
+4,Brooks & Dunn,2
+4,Alan Jackson,2
+4,ZAYN,1
+4,Wade Hayes,1
+4,Travis Tritt,1
+4,Travis Scott,1
+4,The Weeknd,1
+4,The Goo Goo Dolls,1
+4,Taylor Swift,1
+4,Shawn Mendes,1
+4,Sam Smith,1
+4,SZA,1
+4,Ronnie Dunn,1
+4,Post Malone,1
+4,P!nk,1
+4,Niykee Heaton,1
+4,Miley Cyrus,1
+4,Migos,1
+4,Mel McDaniel,1
+4,Machine Gun Kelly,1
+4,Logic,1
+4,Little Texas,1
+4,Lil Uzi Vert,1
+4,Lil Pump,1
+4,Liam Payne,1
+4,Lady Gaga,1
+4,L.A. Leakers,1
+4,Kiiara,1
+4,Kesha,1
+4,Keith Whitley,1
+4,KYLE,1
+4,Julia Michaels,1
+4,John Michael Montgomery,1
+4,Joe Diffie,1
+4,James Arthur,1
+4,Interpol,1
+4,Holy Other,1
+4,Harry Styles,1
+4,Halsey,1
+4,Hal Ketchum,1
+4,Gucci Mane,1
+4,George Strait,1
+4,George Jones,1
+4,French Montana,1
+4,Doug Stone,1
+4,Demi Lovato,1
+4,Daryle Singletary,1
+4,Curren$y,1
+4,Confederate Railroad,1
+4,Cheat Codes,1
+4,Charlie Puth,1
+4,Cardi B,1
+4,Bruno Mars,1
+4,Ariana Grande,1
+4,Aaron Tippin,1
+4,311,1
+3,Drake,13
+3,Melanie Martinez,9
+3,Marina and the Diamonds,7
+3,Panic! At The Disco,5
+3,Halsey,5
+3,Tove Lo,4
+3,The 1975,4
+3,Rihanna,4
+3,Lana Del Rey,3
+3,Twenty One Pilots,2
+3,The Neighbourhood,2
+3,Lorde,2
+3,Lil Wayne,2
+3,Kehlani,2
+3,J. Cole,2
+3,Amy Winehouse,2
+3,Wallpaper.,1
+3,Voxtrot,1
+3,Vic Mensa,1
+3,The Rubens,1
+3,Teriyaki Boyz,1
+3,Tash Sultana,1
+3,Skrillex,1
+3,Sia,1
+3,Romeo Santos,1
+3,Rendezvous At Two,1
+3,Queen,1
+3,Pia Mia,1
+3,Peking Duk,1
+3,Paramore,1
+3,Miike Snow,1
+3,Katy Perry,1
+3,Holy Other,1
+3,Hey Violet,1
+3,Grimes,1
+3,Grace,1
+3,Foster The People,1
+3,Flo Rida,1
+3,Fergie,1
+3,Fall Out Boy,1
+3,Epic Rap Battles of History,1
+3,Electric Guest,1
+3,ConfidentialMX,1
+3,Chris Brown,1
+3,Bruno Mars,1
+3,Betty Chung,1
+3,Beastie Boys,1
+3,Ariana Grande,1
+3,Arctic Monkeys,1
+3,All Time Low,1
+3,5 Seconds of Summer,1
+2,My Chemical Romance,24
+2,Fall Out Boy,9
+2,Flyleaf,7
+2,Paramore,6
+2,blink-182,3
+2,Taking Back Sunday,3
+2,Newsboys,3
+2,The Front Bottoms,2
+2,Sum 41,2
+2,No Doubt,2
+2,Hawthorne Heights,2
+2,for KING & COUNTRY,1
+2,Youngblood Hawke,1
+2,Yellowcard,1
+2,Twenty One Pilots,1
+2,The Strokes,1
+2,Tegan and Sara,1
+2,Russ,1
+2,Rend Collective,1
+2,Paul Baloche,1
+2,Nirvana,1
+2,Meg & Dia,1
+2,Matt Maher,1
+2,Maroon 5,1
+2,Lauren Daigle,1
+2,Jonas Blue,1
+2,Jason Aldean,1
+2,Ghost Town,1
+2,Gerard Way,1
+2,Coheed and Cambria,1
+2,Chris Tomlin,1
+1,The Rolling Stones,6
+1,The Doors,3
+1,Led Zeppelin,3
+1,Cream,3
+1,Benita Washington,3
+1,Vince Guaraldi Trio,2
+1,The Beatles,2
+1,Sheryl Crow,2
+1,Selena Gomez & The Scene,2
+1,Ray Charles,2
+1,OneRepublic,2
+1,NEEDTOBREATHE,2
+1,Marvin Gaye,2
 1,Lady Gaga,2
-1,LMFAO,2
-1,Calvin Harris,2
-1,American Authors,2
-1,blackbear,1
-1,Will Smith,1
-1,Wild Cherry,1
-1,Vanilla Ice,1
-1,Toploader,1
-1,Tom Petty and the Heartbreakers,1
-1,The Weeknd,1
-1,The Lumineers,1
-1,The Isley Brothers,1
-1,The Downtown Fiction,1
-1,The Aranbee Pop Symphony Orchestra,1
-1,Taio Cruz,1
-1,Sixpence None The Richer,1
-1,Sir Mix-A-Lot,1
-1,Shwayze,1
-1,P!nk,1
-1,Old School Players,1
-1,Next,1
-1,Neil Diamond,1
-1,Mr. C The Slide Man,1
-1,Mario,1
-1,Mariah Carey,1
-1,Macklemore & Ryan Lewis,1
-1,MKTO,1
-1,Lil Wayne,1
-1,Kris Kross,1
-1,Kid Cudi,1
-1,Katy Perry,1
-1,K-Ci & JoJo,1
-1,Jessie J,1
-1,Jason Mraz,1
-1,J. Holiday,1
-1,House Of Pain,1
-1,Frank Ocean,1
-1,Florida Georgia Line,1
-1,Etta James,1
-1,Edwin McCain,1
+1,Johnnyswim,2
+1,Colbie Caillat,2
+1,Canned Heat,2
+1,Bob Marley & The Wailers,2
+1,Alanis Morissette,2
+1,tobyMac,1
+1,ZZ Top,1
+1,You+Me,1
+1,Willie Nelson,1
+1,Van Morrison,1
+1,Train,1
+1,The Wonders,1
+1,The Troggs,1
+1,The Outfield,1
+1,The Archies,1
+1,The Animals,1
+1,Tha Eastsidaz,1
+1,Taylor Swift,1
+1,Swedish House Mafia,1
+1,Supertramp,1
+1,Steppenwolf,1
+1,Solomon Burke,1
+1,Sly Stone,1
+1,Sister Sledge,1
+1,Sister Anne & The Mountaintop Singers,1
+1,Shovels & Rope,1
+1,Sheppard,1
+1,Sarah McLachlan,1
+1,Sara Bareilles,1
+1,Santana,1
+1,Sam Cooke,1
+1,Rufus Featuring Chaka Khan,1
+1,Rudimental,1
+1,Ray LaMontagne,1
+1,Rascal Flatts,1
+1,Randy Newman,1
+1,Pharrell Williams,1
+1,Percy Sledge,1
+1,Paul Simon,1
+1,Passenger,1
+1,Ozzy Osbourne,1
+1,Norman Greenbaum,1
+1,Norman Blake,1
+1,Norah Jones,1
+1,Night Riots,1
+1,Nickelback,1
+1,Niall Horan,1
+1,New Radicals,1
+1,Ne-Yo,1
+1,Natasha Bedingfield,1
+1,Natalie Merchant,1
+1,Nappy Roots,1
+1,Mötley Crüe,1
+1,Miley Cyrus,1
+1,Meghan Trainor,1
+1,Macklemore,1
+1,Mac Wiseman,1
+1,Lukas Graham,1
+1,Louis Armstrong,1
+1,Little Big Town,1
+1,Lauren Alaina,1
+1,Kenny Chesney,1
+1,Kelvin Jones,1
+1,Joyous Holiday Players,1
+1,Johnny Nash,1
+1,Joe Cocker,1
+1,Jimmy Needham,1
+1,Jimmy Cliff,1
+1,Jimi Hendrix,1
+1,Jeff,1
+1,Hillsong United,1
+1,"Harry Connick, Jr.",1
+1,Faces,1
+1,Esthero,1
+1,Electric Light Orchestra,1
+1,Edward Sharpe & The Magnetic Zeros,1
 1,Ed Sheeran,1
-1,Disclosure,1
-1,Dave Matthews Band,1
-1,Daft Punk,1
-1,Cupid,1
-1,Colbie Caillat,1
-1,Clean Bandit,1
-1,Charli XCX,1
-1,Cascada,1
-1,Cali Swag District,1
-1,Bow Wow,1
-1,Bob Marley & The Wailers,1
-1,Becky G,1
-1,Ariana Grande,1
-0,Anthony Hamilton,20
-0,Missy Elliott,19
-0,Chrisette Michele,19
-0,Damian Marley,10
-0,Estelle,7
-0,Leela James,5
-0,Amy Grant,3
-0,The Jackson 5,2
-0,Pentatonix,2
-0,Casting Crowns,2
-0,Bing Crosby,2
-0,Zara Larsson,1
-0,Wyclef Jean,1
-0,Whitney Houston,1
-0,Weezer,1
-0,Trans-Siberian Orchestra,1
-0,Thundercat,1
-0,The Vamps,1
-0,The Staves,1
-0,The Piano Guys,1
-0,Tevin Campbell,1
-0,Tegan and Sara,1
-0,Sidewalk Prophets,1
-0,Scotty McCreery,1
-0,Savatage,1
-0,Rivertribe,1
-0,Ne-Yo,1
-0,Nat King Cole,1
-0,MercyMe,1
-0,Meghan Trainor,1
-0,Lucy Spraggan,1
-0,Little Elves Choir,1
+1,"Earth, Wind & Fire",1
+1,Dionne Warwick,1
+1,Diana Krall,1
+1,Connie Constance,1
+1,Catey Shaw,1
+1,Carrie Underwood,1
+1,Buffalo Springfield,1
+1,Booker T. & the M.G.'s,1
+1,Bobby McFerrin,1
+1,Bob Dylan,1
+1,Bill Withers,1
+1,Big Brother & The Holding Company,1
+1,Better Than Ezra,1
+1,Ben Rector,1
+1,Ben Howard,1
+1,Banjo Troubadours,1
+1,Baby Lullaby,1
+1,Avicii,1
+1,Aretha Franklin,1
+1,Andrew Gold,1
+1,Alicia Myers,1
+1,Alesso,1
+1,Ages and Ages,1
+1,Adam Sandler,1
+1,5 Seconds of Summer,1
+0,Matchbox Twenty,9
+0,Alanis Morissette,4
+0,blink-182,3
+0,Third Eye Blind,3
+0,John Mayer,3
+0,Good Charlotte,3
+0,Barenaked Ladies,3
+0,Vertical Horizon,2
+0,Van Halen,2
+0,Train,2
+0,Tracy Chapman,2
+0,The New Basement Tapes,2
+0,The Goo Goo Dolls,2
+0,Shaggy,2
+0,Red Hot Chili Peppers,2
+0,RAC,2
+0,Michael Jackson,2
+0,Mariachi El Bronx,2
+0,Manchester Orchestra,2
+0,Jack Johnson,2
+0,Fleetwood Mac,2
+0,Five For Fighting,2
+0,Counting Crows,2
+0,Blondie,2
+0,Young the Giant,1
+0,XTC,1
+0,VÉRITÉ,1
+0,Vintage Trouble,1
+0,U2,1
+0,Tim Legend,1
+0,The War On Drugs,1
+0,The Tubes,1
+0,The Shins,1
+0,The Jam,1
+0,The Head and the Heart,1
+0,The Decemberists,1
+0,The Cars,1
+0,The Cardigans,1
+0,The Beat,1
+0,The Avett Brothers,1
+0,Ted Leo and the Pharmacists,1
+0,Sugar Ray,1
+0,Stevie Wonder,1
+0,Squeeze,1
+0,Spin Doctors,1
+0,Sixpence None The Richer,1
+0,Sister Hazel,1
+0,Simon & Garfunkel,1
+0,Silversun Pickups,1
+0,Semisonic,1
+0,SAINT WKND,1
+0,Ryan Adams,1
+0,Run River North,1
+0,Royal Tongues,1
+0,Royal Blood,1
+0,Robert DeLong,1
+0,Reuben And The Dark,1
+0,Ray LaMontagne,1
+0,Phoenix,1
+0,Paul McCartney,1
+0,Pat Benatar,1
+0,Oasis,1
+0,Nirvana,1
+0,Night Riots,1
+0,Nathaniel Rateliff & The Night Sweats,1
+0,Natalie Imbruglia,1
+0,Miike Snow,1
+0,Men At Work,1
+0,Madness,1
+0,MGMT,1
+0,Lord Huron,1
+0,Lolawolf,1
+0,Lifehouse,1
+0,Lianne La Havas,1
 0,Leon Bridges,1
-0,Kirk Franklin,1
-0,Kenny Turnup,1
-0,Kaleb Mitchell,1
-0,Jasmine Thompson,1
-0,Jars Of Clay,1
-0,James Brown,1
-0,JMSN,1
-0,JJ Heller,1
-0,Iron & Wine,1
-0,Grace Potter & The Nocturnals,1
-0,Francesca Battistelli,1
-0,Flyleaf,1
-0,Dyro,1
-0,Downhere,1
-0,Diddy,1
-0,City of the Sun,1
-0,Christina Aguilera,1
-0,Chris August,1
-0,Carrie Underwood,1
-0,Billy Currington,1
-0,Ben Rector,1
-0,AURORA,1
-0,4Him,1
-0,21 Savage,1
+0,Lennon & Maisy,1
+0,Kodaline,1
+0,Kings of Leon,1
+0,Kat Dahlia,1
+0,Judah & the Lion,1
+0,Joywave,1
+0,Johnnyswim,1
+0,John Mellencamp,1
+0,Jimmy Cliff,1
+0,Interpol,1
+0,Huey Lewis & The News,1
+0,Hozier,1
+0,Hootie & The Blowfish,1
+0,Gucci Mane,1
+0,Glass Animals,1
+0,Gin Blossoms,1
+0,Everclear,1
+0,Eve 6,1
+0,Electric Guest,1
+0,Eddie Money,1
+0,Eagle-Eye Cherry,1
+0,Duran Duran,1
+0,Diana Ross,1
+0,Del Amitri,1
+0,Death Cab for Cutie,1
+0,David Bowie,1
+0,Dave Matthews Band,1
+0,Corinne Bailey Rae,1
+0,Collective Soul,1
+0,Cold War Kids,1
+0,CHVRCHES,1
+0,Bruce Springsteen,1
+0,Billy Squier,1
+0,Billy Joel,1
+0,Beck,1
+0,Bear Hands,1
+0,Beach Fossils,1
+0,Bastille,1
+0,Band of Horses,1
+0,Atlas Genius,1
+0,888,1
+0,3 Doors Down,1

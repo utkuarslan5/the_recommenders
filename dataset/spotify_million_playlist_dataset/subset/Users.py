@@ -6,11 +6,7 @@ class Users:
     """ Generate users with random unique playlists """
     def __init__(self):
         self.dict = {}
-        print('heloooooooooooooooooooooooooooooo')
         self.song_data = pd.read_csv('songs.csv')
-        #
-        # print(song_data.head())
-        # print(song_data['track_name'].value_counts())
 
     def generate_users(self, num_users, num_PL_user):
         playlists_rand = random.sample(range(0,4000), 4000)
@@ -47,7 +43,7 @@ class Users:
         for user in self.dict:
             for playlist in self.dict[user]:
                 pl_tracks = self.song_data[self.song_data['pid'] == playlist]['track_name'] # take all songs from one playlist
-                print('for loop startttttttttttttttttt')
+                print(".", end=" ")
                 for i in range(len(pl_tracks)): # take every song in the playlist
                     pl_track = pl_tracks.values[i] # take one song from the playlist
                     user_id.append(user) # append the user id
