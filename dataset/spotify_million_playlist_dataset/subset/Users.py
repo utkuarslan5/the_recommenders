@@ -26,15 +26,19 @@ class Users:
         print(self.dict)
         return self.dict
 
-
-    def lab_ratings(self):
-        rating_df = self.song_data
+    """ Create ratings based on the number of times an artist appears in all of the playlists"""
+    def ratings_by_artists(self, df):
+        rating_df = df
         rating_df['rating'] = 1
-        rating_df.groupby(['artist_name']).count().reset_index()
-        rating_df = rating_df.sort_values(by=['user','rating'])
+        print(rating_df)
+        rating_df = rating_df.groupby(['user', 'artist_name']).sum()
+        print(rating_df)
+        #rating_df.groupby(['artist_name']).count().reset_index()
+        rating_df = rating_df.sort_values(by=['user','rating', 'artist_name'], ascending=False)
         pd.set_option('display.max_columns', None)
         print(rating_df)
         rating_df.to_csv('ratings.csv')
+        return rating_df
 
     """ Create a dataframe which has the songs of each playlist of each user """
     def playlist_assignment(self):
@@ -63,3 +67,4 @@ class Users:
         rating_df = users_df.sort_values(by=['user', 'pid', 'artist_name'])
         print(rating_df.head(2))
         rating_df.to_csv('users.csv')
+        return users_df
