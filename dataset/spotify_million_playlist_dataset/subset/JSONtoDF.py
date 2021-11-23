@@ -5,7 +5,7 @@ files = ['mpd.slice.0-999.json', 'mpd.slice.1000-1999.json', 'mpd.slice.2000-299
 data = json.load(open('mpd.slice.0-999.json'))
 
 #json to dataframe ---------------------------------------------------------------------------------
-lat,lng,el, album = [],[],[], []
+pid, lat,lng,el, album = [],[],[],[], []
 for i in range(len(files)):
     data = json.load(open(files[i]))
     for result in data['playlists']:
@@ -13,13 +13,13 @@ for i in range(len(files)):
             lng.append(track_result[u'track_name'])
             el.append(track_result[u'artist_name'])
             album.append(track_result[u'album_name'])
-
+            pid.append(result[u'pid'])
             lat.append(result[u'name'])
 
-df = pd.DataFrame([lat,lng, el, album]).T
-df.columns = ['playlist', 'track_name', 'artist_name', 'album_name']
+df = pd.DataFrame([pid,lat,lng, el, album]).T
+df.columns = ['pid','playlist', 'track_name', 'artist_name', 'album_name']
 pd.set_option('display.max_columns', None)
-final_df = df.sort_values(by=['playlist', 'artist_name'])
+final_df = df.sort_values(by=['pid', 'artist_name'])
 print(final_df.head(100))
 
 # dataframe to csv ---------------------------------------------------------------------------------
