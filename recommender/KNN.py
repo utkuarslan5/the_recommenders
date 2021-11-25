@@ -61,7 +61,9 @@ class KNN:
 
         songs_artist = list(range(0,self.num_rec))
         for i in range(len(df_artists)):
-            songs_artist[i] = math.trunc(round((df_artists['rating'].iloc[i]/df_artists['rating'].sum())*num_songs))
+            x = (df_artists['rating'].iloc[i]/df_artists['rating'].sum())*num_songs
+            print(x)
+            songs_artist[i] = math.trunc(math.ceil(x))
 
         print("\nsongs per artist: ", songs_artist)
         print("neighbours list: ", neighbors)
@@ -86,6 +88,6 @@ class KNN:
 
         print("\n amount of artists:",k)
         print("\n Recommended songs:")
-        print(recommended_songs)
+        print(recommended_songs[0:num_songs])
 
 
