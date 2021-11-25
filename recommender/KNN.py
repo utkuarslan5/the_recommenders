@@ -7,14 +7,11 @@ class KNN:
     """ KNN """
 
     def __init__(self, num_nn, num_rec):
-        #self.df = df #song
         self.num_rec = num_rec
         self.num_nn = num_nn
         self.df_csv = pd.read_csv('export/ratings.csv')
         self.rating_df = self.df_csv.pivot(index='user', columns='artist_name', values='rating')
         self.rating_df = self.rating_df.fillna(0)
-        # print(song_data.head())
-        # print(song_data['track_name'].value_counts())
 
     '''
         Recommend artist based on the most common artists between the neighbours
@@ -71,11 +68,12 @@ class KNN:
         size_dict = df_songs.pivot_table(columns=['artist_name'], aggfunc='size').to_dict()
         k = 0
         for i in songs_artist:
-            extention = 0
             size = size_dict[df_artists['artist_name'].iloc[k]]
             print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
             for user_index in range(i):
 
+                #get number of songs of each artist
+                #print(song_data['track_name'].value_counts()) or down
                 #print('size ', size)
                 # size = df_artists.loc[df_artists['artist_name'] == df_artists['artist_name'].iloc[k], 'rating'].iloc[0]
                 # print(size)
@@ -88,7 +86,7 @@ class KNN:
                 #     print('index ', user_index)
                 if song not in recommended_songs:
                     recommended_songs.append(song)
-                    #print("song number: ", user_index, " is ", song)
+                    print("song number: ", user_index, " is ", song)
             k += 1
 
         print("\n amount of artists:",k)
