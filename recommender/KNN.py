@@ -56,7 +56,7 @@ class KNN:
     '''
     def recommend_songs(self, df_ra, num_songs):
         df_artists = df_ra
-        df_songs = pd.read_csv('users.csv')
+        df_songs = pd.read_csv('export/users.csv')
         df_songs = df_songs.loc[df_songs['user'].isin(neighbors)]
 
         songs_artist = list(range(0,self.num_rec))
@@ -68,11 +68,19 @@ class KNN:
 
         recommended_songs = list()
         k = 0
+        extention = 0
         for i in songs_artist:
             print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
             for user_index in range(i):
                 song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[user_index]
+
+                if song in recommended_songs:
+                    extention += 1
+                    song_index = user_index + extention
+                    song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[song_index]
+
                 recommended_songs.append(song)
+
                 print("song number: ", user_index, " is ", song)
             k += 1
 
