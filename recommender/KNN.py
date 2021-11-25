@@ -33,8 +33,8 @@ class KNN:
         neighbour_df = self.df_csv.loc[self.df_csv['user'].isin(neighbors)]
 
         pd.set_option('display.max_rows', None)
-        print(neighbors)
-        print(neighbour_df)
+        #print(neighbors)
+        #print(neighbour_df)
 
         rec_artists_df = neighbour_df.groupby(['artist_name'], as_index=False)['rating'].sum()
         rec_artists_df = rec_artists_df.sort_values(by=['rating'], ascending=False)
@@ -62,32 +62,38 @@ class KNN:
         songs_artist = list(range(0,self.num_rec))
         for i in range(len(df_artists)):
             x = (df_artists['rating'].iloc[i]/df_artists['rating'].sum())*num_songs
-            print(x)
             songs_artist[i] = math.trunc(math.ceil(x))
 
-        print("\nsongs per artist: ", songs_artist)
-        print("neighbours list: ", neighbors)
+        #print("\nsongs per artist: ", songs_artist)
+        #print("neighbours list: ", neighbors)
 
         recommended_songs = list()
+        size_dict = df_songs.pivot_table(columns=['artist_name'], aggfunc='size').to_dict()
         k = 0
-        extention = 0
         for i in songs_artist:
+            extention = 0
+            size = size_dict[df_artists['artist_name'].iloc[k]]
             print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
             for user_index in range(i):
-                song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[user_index]
 
-                if song in recommended_songs:
-                    extention += 1
-                    song_index = user_index + extention
-                    song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[song_index]
-
-                recommended_songs.append(song)
-
-                print("song number: ", user_index, " is ", song)
+                #print('size ', size)
+                # size = df_artists.loc[df_artists['artist_name'] == df_artists['artist_name'].iloc[k], 'rating'].iloc[0]
+                # print(size)
+                if user_index < size:
+                    song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[user_index]
+                #
+                # if song in recommended_songs:
+                #     extention += 1
+                #     user_index = user_index + extention
+                #     print('index ', user_index)
+                if song not in recommended_songs:
+                    recommended_songs.append(song)
+                    #print("song number: ", user_index, " is ", song)
             k += 1
 
         print("\n amount of artists:",k)
         print("\n Recommended songs:")
         print(recommended_songs[0:num_songs])
+        print("\n Size of recommended songs: ", len(recommended_songs))
 
 

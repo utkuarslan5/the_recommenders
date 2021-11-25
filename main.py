@@ -18,7 +18,7 @@ def main():
     print("Loading recommendations KNN . . .")
 
     art_rec = 10
-    song_rec = 2
+    song_rec = 400
     neighbours = 5
     knn = KNN(neighbours, art_rec)
     artists = knn.recommend_artists()
