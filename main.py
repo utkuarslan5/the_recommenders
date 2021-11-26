@@ -1,6 +1,7 @@
 from recommender.Individual.KNN import KNN
 from recommender.Group.GroupRecommendation import GroupRecommendation
 from recommender.Individual.apriori import Apriori
+from recommender.Explanations import Explanations
 
 
 def main():
@@ -21,12 +22,12 @@ def main():
     print("Generating individual recommendations KNN . . .")
 
     art_rec = 10
-    song_rec = 10
+    song_rec = 1
     neighbours = 5
     target_user = 0
     knn = KNN(neighbours, art_rec)
-    artists = knn.recommend_artists(target_user)
-    songs = knn.recommend_songs(artists, song_rec)
+    knn_artists = knn.recommend_artists(target_user)
+    knn_songs = knn.recommend_songs(knn_artists, song_rec)
 
     print("Generating groups . . .")
 
@@ -44,7 +45,7 @@ def main():
     print("Generating Group recommendations with Plurality Voting . . . ")
 
     art_rec_group = 10
-    song_rec_group = 10
+    song_rec_group = 1
     users_per_group = []
     group_rec = GroupRecommendation(song_rec_group)
     group = [0, 1, 2, 3, 4, 5]
@@ -53,10 +54,18 @@ def main():
 
     print("\n Generating Apriori . . . ")
 
-    apriori = Apriori()
-    test_df = apriori.calculate_pair_support('Killing Me Softly', 'Get Lucky', column='Album')
-    test_df.to_csv('test.csv')
-    print('Done!')
+    # apriori = Apriori()
+    # test_df = apriori.calculate_pair_support('Killing Me Softly', 'Get Lucky', column='Album')
+    # test_df.to_csv('test.csv')
+    # print('Done!')
+
+    explanations = Explanations()
+
+    print("\nGenerating Individual Explanations . . .")
+    knn_expl = explanations.knn_expl(knn_songs, knn_artists)
+
+    print("\nGenerating Group Explanations . . .")
+    pl_expl = explanations.pl_expl(songs_group, artists_group)
 
 
 if __name__ == "__main__":

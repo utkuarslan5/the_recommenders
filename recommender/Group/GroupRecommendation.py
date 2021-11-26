@@ -69,4 +69,5 @@ class GroupRecommendation:
         print("\n Recommended songs:")
         print(recommended_songs[0:num_songs])
         print("\n Size of recommended songs: ", len(recommended_songs))
+        return recommended_songs
 

@@ -23,8 +23,8 @@ class KNN:
         knn = NearestNeighbors(n_neighbors=self.num_nn, metric='cosine')
         model = knn.fit(self.rating_df)
         user = self.rating_df.iloc[target_user, ]
-        #user_print = user[user != 0]
-        #print(user_print.sort_values(ascending=False))
+        # user_print = user[user != 0]
+        # print(user_print.sort_values(ascending=False))
 
         #user_artists_df = pd.DataFrame({'artist_name': user.index, 'rating': user.values})
         # OR ----------------
@@ -106,5 +106,7 @@ class KNN:
         print("\n Recommended songs:")
         print(recommended_songs[0:num_songs])
         print("\n Size of recommended songs: ", len(recommended_songs))
+
+        return recommended_songs[0:num_songs]
 
 
