@@ -6,7 +6,7 @@ class GroupRecommendation:
     '''Group Recommendation Strategies'''
 
     def __init__(self, num_rec):
-        self.group_df = pd.read_csv('export/GroupData/group61_ratings.csv')
+        self.group_df = pd.read_csv('export/ratings.csv')
         self.num_rec = num_rec
 
     '''Plurality Voting Strategy 

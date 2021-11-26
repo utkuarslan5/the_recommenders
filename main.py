@@ -1,6 +1,6 @@
 from recommender.Individual.KNN import KNN
-from recommender.UsersGenerator import UsersGenerator
 from recommender.Group.GroupRecommendation import GroupRecommendation
+from recommender.Individual.apriori import Apriori
 
 
 def main():
@@ -51,7 +51,12 @@ def main():
     artists_group = group_rec.pl_voting_artists(group)
     songs_group = group_rec.group_songs(artists_group, song_rec)
 
+    print("\n Generating Apriori . . . ")
 
+    apriori = Apriori()
+    test_df = apriori.calculate_pair_support('Killing Me Softly', 'Get Lucky', column='Album')
+    test_df.to_csv('test.csv')
+    print('Done!')
 
 
 if __name__ == "__main__":
