@@ -12,24 +12,37 @@ class KNN:
         self.df_csv = pd.read_csv('export/ratings.csv')
         self.rating_df = self.df_csv.pivot(index='user', columns='artist_name', values='rating')
         self.rating_df = self.rating_df.fillna(0)
-
+        pd.set_option('display.max_columns', None)
+        pd.set_option('display.max_rows', None)
+        # print(self.rating_df)
     '''
         Recommend artist based on the most common artists between the neighbours
         Sum the ratings for each artist from all nearest neighbours
     '''
-    def recommend_artists(self):
+    def recommend_artists(self, target_user):
         knn = NearestNeighbors(n_neighbors=self.num_nn, metric='cosine')
         model = knn.fit(self.rating_df)
-        artists = self.rating_df.iloc[1,]
+        user = self.rating_df.iloc[target_user, ]
+        #user_print = user[user != 0]
+        #print(user_print.sort_values(ascending=False))
+
+        #user_artists_df = pd.DataFrame({'artist_name': user.index, 'rating': user.values})
+        # OR ----------------
+        # user_dict = user.to_dict()
+        # dict_print = {}
+        #
+        # for artist, rating in user_dict.items():
+        #     if rating != 0:
+        #         dict_print[artist] = rating
+        #         print(artist, " --- ", rating)
 
         # The indices contain only the index values of users from the user table.
-        distances, indices = model.kneighbors([artists])
+        distances, indices = model.kneighbors([user])
         global neighbors
         neighbors = indices[0][1:].tolist() # the users that are closest to the user we make a recommendation for
 
         neighbour_df = self.df_csv.loc[self.df_csv['user'].isin(neighbors)]
 
-        pd.set_option('display.max_rows', None)
         #print(neighbors)
         #print(neighbour_df)
 
@@ -69,7 +82,7 @@ class KNN:
         k = 0
         for i in songs_artist:
             size = size_dict[df_artists['artist_name'].iloc[k]]
-            print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
+            #print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
             for user_index in range(i):
 
                 #get number of songs of each artist
@@ -86,7 +99,7 @@ class KNN:
                 #     print('index ', user_index)
                 if song not in recommended_songs:
                     recommended_songs.append(song)
-                    print("song number: ", user_index, " is ", song)
+                    #print("song number: ", user_index, " is ", song)
             k += 1
 
         print("\n amount of artists:",k)
