@@ -1,4 +1,5 @@
 from recommender.KNN import KNN
+from recommender.apriori import Apriori
 
 
 def main():
@@ -23,6 +24,11 @@ def main():
     knn = KNN(neighbours, art_rec)
     artists = knn.recommend_artists()
     songs = knn.recommend_songs(artists, song_rec)
+
+    apriori = Apriori()
+    test_df = apriori.calculate_pair_support('Killing Me Softly', 'Get Lucky', column='Album')
+    test_df.to_csv('test.csv')
+    print('Done!')
 
 
 if __name__ == "__main__":
