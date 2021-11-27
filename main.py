@@ -2,6 +2,7 @@ from recommender.Individual.KNN import KNN
 from recommender.Group.GroupRecommendation import GroupRecommendation
 from recommender.Individual.apriori import Apriori
 from recommender.Explanations import Explanations
+import pandas as pd
 
 
 def main():
@@ -54,10 +55,12 @@ def main():
 
     print("\n Generating Apriori . . . ")
 
-    # apriori = Apriori()
-    # test_df = apriori.calculate_pair_support('Killing Me Softly', 'Get Lucky', column='Album')
-    # test_df.to_csv('test.csv')
-    # print('Done!')
+    apriori = Apriori()
+    artists = ['Taylor Swift', 'One Direction', 'Ed Sheeran', 'Mumford & Sons']
+    apriori_df = apriori.calculate_support(artists)
+    # test_df = apriori.calculate_pair_support('The Piano Guys', 'My Chemical Romance')
+    apriori_df.to_csv('test.csv')
+    print('Done!')
 
     explanations = Explanations()
 
