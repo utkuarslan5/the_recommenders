@@ -59,7 +59,7 @@ def main():
     artists = ['Taylor Swift', 'One Direction', 'Ed Sheeran', 'Mumford & Sons']
     apriori_df = apriori.calculate_support(artists)
     # test_df = apriori.calculate_pair_support('The Piano Guys', 'My Chemical Romance')
-    apriori_df.to_csv('test.csv')
+    #apriori_df.to_csv('test.csv')
     print('Done!')
 
     explanations = Explanations()

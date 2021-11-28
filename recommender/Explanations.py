@@ -41,7 +41,7 @@ class Explanations:
             print("The songs in the playlist:", songs, "\n")
             explanation = "The playlist has been created for the group" \
                           " because it is from the artists that " \
-                          "have been listened the most by the group with similar taste."
+                          "have been listened the most by the group."
 
         print(explanation)
         return explanation
