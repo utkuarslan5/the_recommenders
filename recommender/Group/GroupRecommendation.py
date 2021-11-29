@@ -27,7 +27,7 @@ class GroupRecommendation:
     """Multiplicative strategy for group recommendations"""
     def multiplicative_artists(self, group):
         group_songs_df = self.group_df.loc[self.group_df['user'].isin(group)]
-        rec_artists_df = group_songs_df.groupby(['artist_name'], as_index=False)['rating'].multiply()
+        rec_artists_df = group_songs_df.groupby(['artist_name'], as_index=False)['rating'].prod()
         rec_artists_df = rec_artists_df.sort_values(by=['rating'], ascending=False)
         rec_artists_df = rec_artists_df[0:self.num_rec]
 
@@ -43,12 +43,19 @@ class GroupRecommendation:
         df_artists = df_ra
         df_songs = pd.read_csv('export/songs.csv')
 
+        threshold = 0.25
         songs_artist = list(range(0, self.num_rec))
-        for i in range(len(df_artists)):
-            x = (df_artists['rating'].iloc[i] / df_artists['rating'].sum()) * num_songs
-            songs_artist[i] = math.trunc(math.ceil(x))
 
-        #print("\n songs per artist: ", songs_artist)
+        for i in range(len(df_artists)):
+            percentage = (df_artists['rating'].iloc[i] / df_artists['rating'].sum())
+            songs_per_art = percentage * num_songs
+
+            if percentage > threshold:
+                songs_per_art = threshold * num_songs
+
+            songs_artist[i] = math.trunc(math.ceil(songs_per_art))
+
+        print("\n songs per artist: ", songs_artist)
 
         recommended_songs = list()
         size_dict = df_songs.pivot_table(columns=['artist_name'], aggfunc='size').to_dict()
