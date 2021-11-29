@@ -28,7 +28,25 @@ class Explanations:
         print(explanation)
         return explanation
 
-    def pl_expl(self, songs, artist):
+    def add_expl(self, songs, artist):
+        songs_str = " "
+        songs_str = songs_str.join(songs)
+        artist = artist['artist_name'].iloc[0]
+
+        if len(songs) == 1:
+            explanation = songs_str + " has been recommended to the group " \
+                          "because it is from the ", artist, " that has " \
+                          "been listened the most by the group."
+        else:
+            print("The songs in the playlist:", songs, "\n")
+            explanation = "The playlist has been created for the group" \
+                          " because it is from the artists that " \
+                          "have been listened the most by the group."
+
+        print(explanation)
+        return explanation
+
+    def mlp_expl(self, songs, artist):
         songs_str = " "
         songs_str = songs_str.join(songs)
         artist = artist['artist_name'].iloc[0]

@@ -20,7 +20,21 @@ class GroupRecommendation:
         # if we want just artist names
         # rec_artists_df = rec_artists_df['artist_name'][0:self.num_rec]
 
-        print('\n Recommended artists with Plurality Voting:')
+        print('\n Recommended artists with Additive Strategy:')
+        print(rec_artists_df)
+        return rec_artists_df
+
+    """Multiplicative strategy for group recommendations"""
+    def multiplicative_artists(self, group):
+        group_songs_df = self.group_df.loc[self.group_df['user'].isin(group)]
+        rec_artists_df = group_songs_df.groupby(['artist_name'], as_index=False)['rating'].multiply()
+        rec_artists_df = rec_artists_df.sort_values(by=['rating'], ascending=False)
+        rec_artists_df = rec_artists_df[0:self.num_rec]
+
+        # if we want just artist names
+        # rec_artists_df = rec_artists_df['artist_name'][0:self.num_rec]
+
+        print('\n Recommended artists with Multiplicative Strategy:')
         print(rec_artists_df)
         return rec_artists_df
 
