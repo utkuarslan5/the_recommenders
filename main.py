@@ -2,14 +2,15 @@ from recommender.Individual.KNN import KNN
 from recommender.Group.GroupRecommendation import GroupRecommendation
 from recommender.Individual.apriori import Apriori
 from recommender.Explanations import Explanations
+from recommender.UsersGenerator import UsersGenerator
 import pandas as pd
 
 
 def main():
     print("Generating users . . .")
 
-    num_users = 11
-    num_PL_perUser = 2
+    num_users = 50
+    num_PL_perUser = 10
     # users = UsersGenerator()
     # users.generate_users(num_users,num_PL_perUser)
     #
@@ -23,14 +24,14 @@ def main():
     print("Generating individual recommendations KNN . . .")
 
     art_rec = 10
-    song_rec = 1
+    song_rec = 15
     neighbours = 5
     target_user = 0
     knn = KNN(neighbours, art_rec)
     knn_artists = knn.recommend_artists(target_user)
     knn_songs = knn.recommend_songs(knn_artists, song_rec)
 
-    print("Generating groups . . .")
+    #print("Generating groups . . .")
 
     # total_users_groups = 50
     #
@@ -43,24 +44,31 @@ def main():
 
     # print("Done")
 
-    print("Generating Group recommendations with Plurality Voting . . . ")
+    print("Generating Group recommendations with Additive Strategy . . . ")
 
-    art_rec_group = 10
-    song_rec_group = 1
-    users_per_group = []
+    art_rec_group = art_rec
+    song_rec_group = song_rec
+    users_per_group = [2,4,6,10]
     group_rec = GroupRecommendation(song_rec_group)
-    group = [0, 1, 2, 3, 4, 5]
-    artists_group = group_rec.pl_voting_artists(group)
-    songs_group = group_rec.group_songs(artists_group, song_rec)
+    for size in users_per_group:
+        start_id = 0
+        end_id = size
+        for i in range(5):
+            group = list(range(start_id, end_id))
+            print("GROUP: ", group)
+            artists_group = group_rec.additive_artists(group)
+            songs_group = group_rec.group_songs(artists_group, song_rec)
+            start_id += size
+            end_id += size
 
-    print("\n Generating Apriori . . . ")
+    #print("\n Generating Apriori . . . ")
 
-    apriori = Apriori()
-    artists = ['Taylor Swift', 'One Direction', 'Ed Sheeran', 'Mumford & Sons']
-    apriori_df = apriori.calculate_support(artists)
-    # test_df = apriori.calculate_pair_support('The Piano Guys', 'My Chemical Romance')
-    #apriori_df.to_csv('test.csv')
-    print('Done!')
+    # apriori = Apriori()
+    # artists = ['Taylor Swift', 'One Direction', 'Ed Sheeran', 'Mumford & Sons']
+    # apriori_df = apriori.calculate_support(artists)
+    # # test_df = apriori.calculate_pair_support('The Piano Guys', 'My Chemical Romance')
+    # #apriori_df.to_csv('test.csv')
+    # print('Done!')
 
     explanations = Explanations()
 
@@ -68,7 +76,7 @@ def main():
     knn_expl = explanations.knn_expl(knn_songs, knn_artists)
 
     print("\nGenerating Group Explanations . . .")
-    pl_expl = explanations.pl_expl(songs_group, artists_group)
+    #pl_expl = explanations.pl_expl(songs_group, artists_group)
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ class KNN:
     def __init__(self, num_nn, num_rec):
         self.num_rec = num_rec
         self.num_nn = num_nn
-        self.df_csv = pd.read_csv('export/ratings.csv')
+        self.df_csv = pd.read_csv('export/ratings_50.csv')
         self.rating_df = self.df_csv.pivot(index='user', columns='artist_name', values='rating')
         self.rating_df = self.rating_df.fillna(0)
         pd.set_option('display.max_columns', None)
@@ -66,7 +66,7 @@ class KNN:
     '''
     def recommend_songs(self, df_ra, num_songs):
         df_artists = df_ra
-        df_songs = pd.read_csv('export/users.csv')
+        df_songs = pd.read_csv('export/users_50.csv')
         df_songs = df_songs.loc[df_songs['user'].isin(neighbors)]
 
         songs_artist = list(range(0,self.num_rec))
