@@ -69,13 +69,19 @@ class KNN:
         df_songs = pd.read_csv('export/users_50.csv')
         df_songs = df_songs.loc[df_songs['user'].isin(neighbors)]
 
+        threshold = 0.25
         songs_artist = list(range(0,self.num_rec))
         for i in range(len(df_artists)):
-            x = (df_artists['rating'].iloc[i]/df_artists['rating'].sum())*num_songs
-            songs_artist[i] = math.trunc(math.ceil(x))
+            percentage = (df_artists['rating'].iloc[i] / df_artists['rating'].sum())
+            songs_per_art = percentage * num_songs
 
-        #print("\nsongs per artist: ", songs_artist)
-        #print("neighbours list: ", neighbors)
+            if percentage > threshold:
+                songs_per_art = threshold * num_songs
+
+            songs_artist[i] = math.trunc(math.ceil(songs_per_art))
+
+        print("\n songs per artist: ", songs_artist)
+        # print("neighbours list: ", neighbors)
 
         recommended_songs = list()
         size_dict = df_songs.pivot_table(columns=['artist_name'], aggfunc='size').to_dict()

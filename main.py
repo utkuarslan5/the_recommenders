@@ -23,7 +23,7 @@ def main():
 
     print("Generating individual recommendations KNN . . .")
 
-    art_rec = 10
+    art_rec = 15
     song_rec = 15
     neighbours = 5
     target_user = 0
@@ -49,15 +49,15 @@ def main():
     art_rec_group = art_rec
     song_rec_group = song_rec
     users_per_group = [2,4,6,10]
-    group_rec = GroupRecommendation(song_rec_group)
+    group_rec = GroupRecommendation(art_rec_group)
     for size in users_per_group:
         start_id = 0
         end_id = size
         for i in range(5):
             group = list(range(start_id, end_id))
             print("GROUP: ", group)
-            artists_group = group_rec.additive_artists(group)
-            songs_group = group_rec.group_songs(artists_group, song_rec)
+            artists_group = group_rec.multiplicative_artists(group)
+            songs_group = group_rec.group_songs(artists_group, song_rec_group)
             start_id += size
             end_id += size
 
@@ -76,7 +76,7 @@ def main():
     knn_expl = explanations.knn_expl(knn_songs, knn_artists)
 
     print("\nGenerating Group Explanations . . .")
-    #pl_expl = explanations.pl_expl(songs_group, artists_group)
+    mlp_expl = explanations.mlp_expl(songs_group, artists_group)
 
 
 if __name__ == "__main__":
