@@ -6,7 +6,7 @@ class Explanations:
     '''
     Individual:
         <Song> has been recommended to you because it is from the <Artist> that has been
-        listened the most by people with similar taste in artists
+        listened the most by people with similar taste in playlists
     Group:
         <Song> has been recommended to the group because it is from the <Artist> that has been
         listened the most by the group.
@@ -18,12 +18,12 @@ class Explanations:
         if len(songs) == 1:
             explanation = songs_str + " has been recommended to you" \
                           " because it is from the ", artist, " that " \
-                          "has been listened the most by people with similar taste."
+                          "has been listened the most by people with similar playlists."
         else:
             print("The songs in the playlist:", songs, "\n")
             explanation = "The playlist has been created for you" \
                           " because it is from the artists that " \
-                          "have been listened the most by people with similar taste."
+                          "have been listened the most by people with similar playlists."
 
         print(explanation)
         return explanation
