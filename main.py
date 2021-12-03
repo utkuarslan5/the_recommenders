@@ -3,16 +3,16 @@ from recommender.Group.GroupRecommendation import GroupRecommendation
 from recommender.Individual.apriori import Apriori
 from recommender.Explanations import Explanations
 from recommender.UsersGenerator import UsersGenerator
-import pandas as pd
 
 
 def main():
-    print("Generating users . . .")
+    global artists_group, songs_group
+    print("\n Generating users . . .")
 
     num_users = 50
     num_PL_perUser = 10
     # users = UsersGenerator()
-    # users.generate_users(num_users,num_PL_perUser)
+    # users.generate_users(num_users, num_PL_perUser)
     #
     # print("Generating the playlists . . .")
     # users_df = users.playlist_assignment()
@@ -31,8 +31,8 @@ def main():
     knn_artists = knn.recommend_artists(target_user)
     knn_songs = knn.recommend_songs(knn_artists, song_rec)
 
-    #print("Generating groups . . .")
-
+    # print("Generating groups . . .")
+    #
     # total_users_groups = 50
     #
     # g_gen = UsersGenerator()
@@ -42,13 +42,11 @@ def main():
     # g_rating_df = g_gen.ratings_by_artists(groups_df)
     # g_rating_df.to_csv('group_ratings.csv')
 
-    # print("Done")
-
     print("Generating Group recommendations with Additive Strategy . . . ")
 
     art_rec_group = art_rec
     song_rec_group = song_rec
-    users_per_group = [2,4,6,10]
+    users_per_group = [2, 4, 6, 10]
     group_rec = GroupRecommendation(art_rec_group)
     for size in users_per_group:
         start_id = 0
@@ -61,22 +59,47 @@ def main():
             start_id += size
             end_id += size
 
-    #print("\n Generating Apriori . . . ")
+    print("\n Generating Apriori . . . ")
 
-    # apriori = Apriori()
-    # artists = ['Taylor Swift', 'One Direction', 'Ed Sheeran', 'Mumford & Sons']
-    # apriori_df = apriori.calculate_support(artists)
-    # # test_df = apriori.calculate_pair_support('The Piano Guys', 'My Chemical Romance')
-    # #apriori_df.to_csv('test.csv')
-    # print('Done!')
+    apriori = Apriori()
+    features = knn_artists['artist_name'].values.tolist()
+    compare = [features[0]]
+    support, confidence = 0.0, 0.0
+    for feature in features:
+        compare.append(feature)
+        test_df, spprt, cnfdnce = apriori.calculate_list_support(compare, column='Artist', explain=False)
+        flag = 0
+        if spprt > support:
+            support = spprt
+            flag += 1
+        if cnfdnce > confidence:
+            confidence = cnfdnce
+            flag += 1
+        if flag >= 1:
+            continue
+        else:
+            compare.pop(-1)
+    round(support, 2)
+    round(confidence, 2)
+    # print(
+    #     '\nTotal support for {} is {:.2f} \nand confidence of {} to {} is {:.2f}'.format(compare, support, compare[0],
+    #                                                                                      compare[1:], confidence))
+    # test_df, support, confidence = apriori.calculate_list_support(features, column='Artist', explain=False)
+    # print(
+    #     '\nTotal support for {} is {:.2f} \nand confidence of {} to {} is {:.2f}'.format(features, support, features[0],
+    #                                                                                      features[1:], confidence))
 
     explanations = Explanations()
+    print("\nGenerating Apriori Explanations . . .")
+    explanations.apriori_expl(compare, support, confidence)
 
     print("\nGenerating Individual Explanations . . .")
-    knn_expl = explanations.knn_expl(knn_songs, knn_artists)
+    explanations.knn_expl(knn_songs, knn_artists)
 
     print("\nGenerating Group Explanations . . .")
-    mlp_expl = explanations.mlp_expl(songs_group, artists_group)
+    explanations.mlp_expl(songs_group, artists_group)
+
+    print('Done!')
 
 
 if __name__ == "__main__":

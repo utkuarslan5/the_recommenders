@@ -137,9 +137,9 @@ def process_playlist(playlist):
         tracks.add(track["track_uri"])
         artists.add(track["artist_uri"])
 
-        full_name = track["track_name"] + " by " + track["artist_name"]
-        artist_histogram[track["artist_name"]] += 1
-        track_histogram[full_name] += 1
+        full_name = track[u"track_name"] + " by " + track[u"artist_name"]
+        artist_histogram[track[u"artist_name"]] += 1
+        track_histogram[normalize_name(full_name)] += 1
 
 
 def process_info(_):
