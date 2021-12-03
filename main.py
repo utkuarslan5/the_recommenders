@@ -56,7 +56,7 @@ def main():
         for i in range(5):
             group = list(range(start_id, end_id))
             print("GROUP: ", group)
-            artists_group = group_rec.multiplicative_artists(group)
+            artists_group = group_rec.additive_artists(group)
             songs_group = group_rec.group_songs(artists_group, song_rec_group)
             start_id += size
             end_id += size

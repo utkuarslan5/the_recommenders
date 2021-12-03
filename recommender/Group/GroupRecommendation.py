@@ -2,6 +2,7 @@ import pandas as pd
 import math
 import random
 
+
 class GroupRecommendation:
     '''Group Recommendation Strategies'''
 
@@ -11,6 +12,7 @@ class GroupRecommendation:
 
     '''Additive Strategy 
         group - the list of users that are in the group (cut from all the users)'''
+
     def additive_artists(self, group):
         group_songs_df = self.group_df.loc[self.group_df['user'].isin(group)]
         rec_artists_df = group_songs_df.groupby(['artist_name'], as_index=False)['rating'].sum()
@@ -25,9 +27,25 @@ class GroupRecommendation:
         return rec_artists_df
 
     """Multiplicative strategy for group recommendations"""
+
     def multiplicative_artists(self, group):
         group_songs_df = self.group_df.loc[self.group_df['user'].isin(group)]
-        rec_artists_df = group_songs_df.groupby(['artist_name'], as_index=False)['rating'].prod()
+        # 0 , 1 users
+        # 0, 109 listened
+        # if sum of times artist occurs in group < size of group => artist rating = 0
+        # => drop his rows from all the users
+        # Then calculate product ratings
+        # print(len(group))
+        # print("COUNTS OF ARTISTS IN GROUP")
+        # print(group_songs_df.groupby(['artist_name'], as_index=False).size())
+        size_df = group_songs_df.groupby(['artist_name'], as_index=False).size()
+        size_df = size_df[size_df['size'] == len(group)]
+        # size_df = size_df[size_df.size != len(group)]
+        artists = list(size_df['artist_name'].to_numpy())
+        print(size_df)
+        # print(artists)
+        rec_artists_df = group_songs_df.loc[self.group_df['artist_name'].isin(artists)]
+        rec_artists_df = rec_artists_df.groupby(['artist_name'], as_index=False)['rating'].prod()
         rec_artists_df = rec_artists_df.sort_values(by=['rating'], ascending=False)
         rec_artists_df = rec_artists_df[0:self.num_rec]
 
@@ -39,22 +57,26 @@ class GroupRecommendation:
         return rec_artists_df
 
     """ Pass a dataframe with the recommended artists and the number of songs that have to be recommended"""
+
     def group_songs(self, df_ra, num_songs):
         df_artists = df_ra
         df_songs = pd.read_csv('export/songs.csv')
 
         threshold = 0.25
-        songs_artist = list(range(0, self.num_rec))
+        songs_artist = list()
 
         for i in range(len(df_artists)):
+
             percentage = (df_artists['rating'].iloc[i] / df_artists['rating'].sum())
+            # print("PERCENTAGE: ", percentage)
             songs_per_art = percentage * num_songs
 
             if percentage > threshold:
                 songs_per_art = threshold * num_songs
 
-            songs_artist[i] = math.trunc(math.ceil(songs_per_art))
-
+            songs_artist.append(math.trunc(math.ceil(songs_per_art)))
+            #print("INDEX", i)
+            #print(songs_artist[i])
         print("\n songs per artist: ", songs_artist)
 
         recommended_songs = list()
@@ -62,7 +84,7 @@ class GroupRecommendation:
         k = 0
         for i in songs_artist:
             size = size_dict[df_artists['artist_name'].iloc[k]]
-            #print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
+            # print("\n----- Amount of songs from  ----- ",df_artists['artist_name'].iloc[k], " ---- ",i)
             for user_index in range(i):
 
                 # get number of songs of each artist
@@ -70,11 +92,11 @@ class GroupRecommendation:
                 # print('size ', size)
                 # size = df_artists.loc[df_artists['artist_name'] == df_artists['artist_name'].iloc[k], 'rating'].iloc[0]
                 # print(size)
-                rand_song = random.sample(range(0,size), size)
+                rand_song = random.sample(range(0, size), size)
                 if rand_song[user_index] < size:
-                    song = df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[
+                    song = \
+                    df_songs.loc[df_songs['artist_name'] == df_artists['artist_name'].iloc[k], 'track_name'].iloc[
                         rand_song[user_index]]
-
 
                 #
                 # if song in recommended_songs:
@@ -83,12 +105,11 @@ class GroupRecommendation:
                 #     print('index ', user_index)
                 if song not in recommended_songs:
                     recommended_songs.append(song)
-                    #print("song number: ", user_index, " is ", song)
+                    # print("song number: ", user_index, " is ", song)
             k += 1
 
-        #print("\n amount of artists:", k)
+        # print("\n amount of artists:", k)
         print("\n Recommended songs:")
         print(recommended_songs[0:num_songs])
-        #print("\n Size of recommended songs: ", len(recommended_songs))
+        # print("\n Size of recommended songs: ", len(recommended_songs))
         return recommended_songs
-
