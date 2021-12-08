@@ -11,6 +11,7 @@ def main():
 
     num_users = 50
     num_PL_perUser = 10
+
     # users = UsersGenerator()
     # users.generate_users(num_users, num_PL_perUser)
     #
@@ -26,6 +27,7 @@ def main():
     art_rec = 15
     song_rec = 15
     neighbours = 5
+
     target_user = 0
     knn = KNN(neighbours, art_rec)
     knn_artists = knn.recommend_artists(target_user)
@@ -42,52 +44,57 @@ def main():
     # g_rating_df = g_gen.ratings_by_artists(groups_df)
     # g_rating_df.to_csv('group_ratings.csv')
 
-    print("Generating Group recommendations with Additive Strategy . . . ")
-
-    art_rec_group = art_rec
-    song_rec_group = song_rec
-    users_per_group = [2, 4, 6, 10]
-    group_rec = GroupRecommendation(art_rec_group)
-    for size in users_per_group:
-        start_id = 0
-        end_id = size
-        for i in range(5):
-            group = list(range(start_id, end_id))
-            print("GROUP: ", group)
-            artists_group = group_rec.additive_artists(group)
-            songs_group = group_rec.group_songs(artists_group, song_rec_group)
-            start_id += size
-            end_id += size
+    # print("Generating Group recommendations with Additive Strategy . . . ")
+    #
+    # art_rec_group = art_rec
+    # song_rec_group = song_rec
+    # # users_per_group = [2, 4, 6, 10]
+    # users_per_group = [2, 5]
+    # group_rec = GroupRecommendation(art_rec_group)
+    # for size in users_per_group:
+    #     start_id = 0
+    #     end_id = size
+    #     for i in range(5):
+    #         group = list(range(start_id, end_id))
+    #         print("GROUP: ", group)
+    #         artists_group = group_rec.additive_artists(group)
+    #         songs_group = group_rec.group_songs(artists_group, song_rec_group)
+    #         start_id += size
+    #         end_id += size
 
     print("\n Generating Apriori . . . ")
 
     apriori = Apriori()
     features = knn_artists['artist_name'].values.tolist()
+    # features = knn_songs
     compare = [features[0]]
-    support, confidence = 0.0, 0.0
+    support, confidence, lmbda = 0.0, 0.0, 1
     for feature in features:
         compare.append(feature)
         test_df, spprt, cnfdnce = apriori.calculate_list_support(compare, column='Artist', explain=False)
+        # @TODO: add pairwise comparison as well
         flag = 0
-        if spprt > support:
+        if spprt > support / lmbda:
             support = spprt
             flag += 1
-        if cnfdnce > confidence:
+        if cnfdnce > confidence / lmbda:
             confidence = cnfdnce
             flag += 1
         if flag >= 1:
             continue
         else:
             compare.pop(-1)
-    round(support, 2)
-    round(confidence, 2)
-    # print(
-    #     '\nTotal support for {} is {:.2f} \nand confidence of {} to {} is {:.2f}'.format(compare, support, compare[0],
-    #                                                                                      compare[1:], confidence))
+    round(support, 3)
+    round(confidence, 3)
+    # features = ["The Beatles", "Queen"]
+    # test_df, spprt, cnfdnce = apriori.calculate_list_support(features, column='Artist', explain=False)
+    print(
+        '\nTotal support for {} is {:.3f} \nand confidence of {} to {} is {:.3f}'.format(compare, support, compare[0],
+                                                                                         compare[1:], confidence))
     # test_df, support, confidence = apriori.calculate_list_support(features, column='Artist', explain=False)
     # print(
-    #     '\nTotal support for {} is {:.2f} \nand confidence of {} to {} is {:.2f}'.format(features, support, features[0],
-    #                                                                                      features[1:], confidence))
+    #     '\nTotal support for {} is {:.3f} \nand confidence of {} to {} is {:.3f}'.format(features, spprt, features[0],
+    #                                                                                      features[1:], cnfdnce))
 
     explanations = Explanations()
     print("\nGenerating Apriori Explanations . . .")
