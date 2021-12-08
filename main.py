@@ -1,9 +1,11 @@
+import pandas as pd
+
 from recommender.Individual.KNN import KNN
+from recommender.Individual.ItemCF import ItemCF
 from recommender.Group.GroupRecommendation import GroupRecommendation
 from recommender.Individual.apriori import Apriori
 from recommender.Explanations import Explanations
 from recommender.UsersGenerator import UsersGenerator
-
 
 def main():
     global artists_group, songs_group
@@ -32,6 +34,37 @@ def main():
     knn = KNN(neighbours, art_rec)
     knn_artists = knn.recommend_artists(target_user)
     knn_songs = knn.recommend_songs(knn_artists, song_rec)
+
+    print("Generating individual recommendations ItemCF . . .")
+    len_threshold = 100
+    k = 3
+    num_seed = 3
+    target_playlist_id = 'pid_4998'
+
+    # data load and preprocessing
+    url = 'https://raw.githubusercontent.com/utkuarslan5/the_recommenders/main/export/songs.csv'
+    df = pd.read_csv(url)
+
+    # drop useless columns
+    df.drop(['Unnamed: 0'], axis=1, inplace=True)
+
+    # generate playlist and song ids
+    df['tid'] = pd.factorize(df.track_name + df.artist_name + df.album_name)[0]
+
+    # remove duplicate songs from the same playlist
+    df.drop_duplicates(subset=['pid', 'tid'], inplace=True)
+    df.sort_values(by=['pid', 'tid'])
+
+    # add prefixes to playlist and tracks ids
+    df['pid'] = 'pid_' + df['pid'].astype(str)
+    df['tid'] = 'tid_' + df['tid'].astype(str)
+
+    # add column to keep track of playlist-song pairs
+    df['count'] = 1
+
+    # execute item CF
+    itemcf = ItemCF(target_playlist_id, num_seed, k, len_threshold)
+    itemcf.execute(df)
 
     # print("Generating groups . . .")
     #
