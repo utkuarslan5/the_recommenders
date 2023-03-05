@@ -1,2 +1,2 @@
-# the_recommenders
-recommendation system for MillionPlaylistDataset
+# Collaborative-Filtering based Individual and Grop Song Recommender
+Based on MillionPlaylistDataset
